@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FORM ACAHA CANTIK</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-image: url("ffa.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', sans-serif;
+            color: #191718;
+            padding: 20px;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            max-width: 1100px;
+            margin: 10px auto 30px;
+            padding: 15px 25px;
+            background: rgba(255, 245, 250, 0.9);
+            border: 1px solid #d9b7ca;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px #d99ab633;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            color: #191718;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: #070707;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #888188;
+            color: white;
+        }
+
+        /* JUDUL */
+        h1 {
+            color: #1c1b1b;
+            text-shadow: 1px 2px #f7e9ef;
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 36px;
+        }
+
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            font-style: italic;
+            color: #5c3150;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            font-size: 20px;
+            color: #5c5056;
+            text-align: center;
+        }
+
+        /* KOTAK KONTEN */
+        .konten {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 25px;
+            background: rgba(255, 248, 252, 0.9);
+            border: 1px solid #d9b7ca;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #12121233;
+            line-height: 1.8;
+        }
+
+        .konten h2 {
+            color: #753b62;
+            margin-top: 0;
+        }
+
+        .konten p {
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        /* FORM */
+        form {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 25px;
+            background: rgba(99, 52, 111, 0.85);
+            border-radius: 15px;
+            color: white;
+        }
+
+        form label {
+            color: white;
+        }
+
+        form input,
+        form select {
+            padding: 9px;
+            margin: 5px 0 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background: #e7a8cb;
+            color: #231522;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background: #f7d5e7;
+        }
+
+        /* TABEL COMPANY */
+        #tabelCompany {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        #tabelCompany th,
+        #tabelCompany td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #tabelCompany th {
+            background: #5226a9;
+            color: white;
+        }
+
+        #tabelCompany td {
+            background: #ebe3e7;
+            color: #111;
+        }
+
+        /* TABEL MAHASISWA */
+        #tabelMahasiswa {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px auto;
+        }
+
+        #tabelMahasiswa th,
+        #tabelMahasiswa td {
+            border: 1px solid #000;
+            padding: 12px;
+            text-align: center;
+        }
+
+        #tabelMahasiswa th {
+            background: #8d78c9;
+            color: white;
+        }
+
+        #tabelMahasiswa td {
+            background: rgba(240, 230, 240, 0.95);
+            color: #111;
+        }
+
+        /* LINK */
+        .kotak {
+            max-width: 300px;
+            margin: 25px auto;
+            padding: 25px;
+            background: #faf6f8cc;
+            border: 1px solid #333;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .kotak:hover {
+            transform: scale(1.05);
+        }
+
+        .kotak a {
+            color: #753b62;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* INSTAGRAM */
+        .instagram {
+            display: inline-block;
+            background: #d98ab5;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .instagram:hover {
+            background: #8c4776;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #4b2841;
+            font-weight: bold;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                border-radius: 20px;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-link {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            #tabelMahasiswa {
+                font-size: 11px;
+            }
+
+            #tabelMahasiswa th,
+            #tabelMahasiswa td {
+                padding: 6px;
+            }
+
+            .konten,
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#home" class="logo">🧟 My Website</a>
+
+        <div class="nav-menu">
+            <a href="#home" class="nav-link">⌂ Home</a>
+            <a href="#tentang" class="nav-link">🧟 About</a>
+            <a href="#kontak" class="nav-link">✉ Contact</a>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home">
+        <h1>My Sweet Website ♡</h1>
+        <h3>Welcome to My Personal Website 🎮</h3>
+    </section>
+
+    <!-- FORM -->
+    <form action="/action_page.php">
+
+        <h2>FORM ACAHA CANTIK ♡</h2>
+
+        <label for="fname">Nama depan:</label><br>
+        <input type="text" id="fname" name="fname"
+               value="achabo"><br>
+
+        <label for="lname">Nama belakang:</label><br>
+        <input type="text" id="lname" name="lname"
+               value="caaaaa"><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <p>Pilih bahasa pemrograman favorit:</p>
+
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label><br><br>
+
+        <p>Kendaraan yang dimiliki:</p>
+
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">I have a bike</label><br>
+
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2">I have a car</label><br>
+
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">I have a boat</label><br><br>
+
+        <label for="cars">Choose a car:</label><br>
+
+        <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="lamborghini">Lamborghini</option>
+            <option value="toyota">Toyota</option>
+        </select>
+
+        <br><br>
+
+        <!-- TABEL COMPANY -->
+        <h3>DATA COMPANY</h3>
+
+        <table id="tabelCompany">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+                <th>Alamat</th>
+            </tr>
+
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+                <td>Parncis</td>
+            </tr>
+
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+                <td>Belgia</td>
+            </tr>
+        </table>
+
+        <br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <!-- DATA MAHASISWA -->
+    <section class="konten">
+        <h2>DATA MAHASISWA BISNIS DIGITAL ANGKATAN 3</h2>
+
+        <table id="tabelMahasiswa">
+            <tr>
+                <th>NO</th>
+                <th>NAMA</th>
+                <th>NIM</th>
+                <th>NOMOR HP</th>
+            </tr>
+
+            <tr><td>1</td><td>NURDIANTI</td><td>WN20625012</td><td>085340106610</td></tr>
+            <tr><td>2</td><td>RISMA RAWE</td><td>WN20625014</td><td>085240106611</td></tr>
+            <tr><td>3</td><td>LALA</td><td>WN20625008</td><td>085199052396</td></tr>
+            <tr><td>4</td><td>SUCI NURUL AULYA</td><td>WN20625016</td><td>082293799716</td></tr>
+            <tr><td>5</td><td>JACQLIEN</td><td>WN20625003</td><td>082358878157</td></tr>
+            <tr><td>6</td><td>AZMI AZIZAH</td><td>WN20625004</td><td>08214120198</td></tr>
+            <tr><td>7</td><td>ANATASYA REFANI</td><td>WN20625002</td><td>085705158509</td></tr>
+            <tr><td>8</td><td>AUREL</td><td>WN20625003</td><td>085762867112</td></tr>
+            <tr><td>9</td><td>NILUH SULVA</td><td>WN20625010</td><td>082229043996</td></tr>
+            <tr><td>10</td><td>RADITHA</td><td>WN20625003</td><td>081342358626</td></tr>
+            <tr><td>11</td><td>MELDA</td><td>WN20625018</td><td>085385938408</td></tr>
+            <tr><td>12</td><td>VARADIBA</td><td>WN20625017</td><td>085188601947</td></tr>
+        </table>
+    </section>
+
+    <!-- LINK WEBSITE -->
+    <div class="kotak">
+        <a href="acha baru.html">
+            ♡ Klik jika ingin ke web Acacnti ♡
+        </a>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="konten" id="tentang">
+        <h2>🧟 About Me</h2>
+        <p>
+            Ini adalah website sederhana untuk belajar HTML dan CSS.
+            Website ini dibuat sebagai tempat belajar coding,
+            mengembangkan kreativitas, dan mencoba desain web.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="konten" id="kontak">
+        <h2>✉ Contact Me</h2>
+        <p>
+            Terima kasih sudah berkunjung ke website saya!
+        </p>
+    </section>
+
+    <section class="konten">
+        <h2>🥴 Enjoying</h2>
+        <p>
+            Habis coding, mabar! #salam boyah
+        </p>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="konten" style="text-align:center">
+        <h2>Let's Be Friends! 💗</h2>
+
+        <p>Follow me for more smiles and memories ✨</p>
+
+        <a class="instagram"
+           href="https://www.instagram.com/acabuoo_21/"
+           target="_blank"
+           rel="noopener noreferrer">
+            ♡ Follow My Instagram ♡
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 My Sweet Website | Made with ♡
+    </footer>
+
+</body>
+</html>
